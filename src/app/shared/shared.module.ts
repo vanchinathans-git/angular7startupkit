@@ -4,8 +4,10 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { HeaderModule } from '../pages/header/header.module';
+import { NumberOnlyDirective } from '@directive/numeric.directive';
 
 @NgModule({
+    declarations: [ NumberOnlyDirective ],
     imports: [ HeaderModule,
     CommonModule,
     ReactiveFormsModule,
@@ -17,7 +19,8 @@ import { HeaderModule } from '../pages/header/header.module';
         ReactiveFormsModule,
         FormsModule,
         HttpClientModule,
-        ScrollingModule ]
+        ScrollingModule,
+    NumberOnlyDirective ]
 })
 export class SharedModule {
 

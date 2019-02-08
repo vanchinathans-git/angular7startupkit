@@ -17,7 +17,8 @@
     "paths": {
       "@service/*": ["src/app/core/service/*"],
       "@shared/*": ["src/app/shared/global/*"],
-      "@validator/*": ["src/app/helper/validator/*"]
+      "@validator/*": ["src/app/helper/validator/*"],
+      "@directive/*": ["src/app/shared/directives/*"]
     },
     "lib": [
       "es2018",

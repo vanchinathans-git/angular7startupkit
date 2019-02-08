@@ -18,6 +18,17 @@ Bootstrap for responsive design
 
 Ngx-spinner: To display the loading spinner
 
+## Numeric Textbox
+
+Numeric textbox directive to accept only numbers, with decimal place, Min and Max value
+
+Sample: input type="text" name="numericTextBox" numberOnly='true' [NumberOnly]='true' [DecimalPlaces]='2'>
+
+Above HTML controls accepts only numbers with 2 decimal places
+
+## tsconfig.json
+
+Added path for custom import paths 
 
 ## Development server
 
