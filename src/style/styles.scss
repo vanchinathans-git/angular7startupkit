@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+@import './variables.scss';
+@font-face {
+    font-family: 'lato-r';
+    src: url('../assets/font/lato/Lato-Regular.ttf')
+}
+@font-face {
+    font-family: lato-b;
+    src: url('../assets/font/lato/Lato-Bold.ttf')
+}
+@font-face {
+    font-family: 'lato-sb';
+    src: url('../assets/font/lato/Lato-Semibold.ttf')
+}
+
+.input-control {
+    border: 0;
+    outline: 0;
+    border-bottom: solid 2px $input-bottom-border-default;
+    width: 100%;
+    padding-bottom: 10px;
+    transition: all 1000ms;
+}
+
+.input-control:focus {
+    border-bottom: solid 2px $input-bottom-border-focus;
+    transition: all 1000ms;
+}
+
+.btn-primary {
+    background-color: $btn-primary-bg-color
+}
+
+.btn-secondary {
+    background-color: #a79e9e;
+}
+
+.heading {
+    font-family: 'lato-b';
+    color: $heading-color;
+    font-size: $heading-size;
+}
+.lbl-primary {
+    font-family: 'lato-sb';
+    color: $label-color;
+    font-size: $label-size;
+}
+
+.txt-primary {
+    font-family: 'lato-r';
+    color: $text-color;
+    font-size: $text-size;
+}
+
+.error {
+    font-family: 'lato-sb';
+    font-size: $error-size;
+}
+
+.jumbotron {
+    background-color: transparent!important;
+}
+
+.auth-container {
+    border-radius: $border-radius;
+    border: solid 1px rgba(180, 166, 166, 0.74);
+    background-color: white;
+}

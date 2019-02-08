@@ -1,0 +1,56 @@
+<div class="container-fluid w-100 p-0 m-0 pt-5">
+    <form [formGroup]="signupForm" (ngSubmit)="onSignup(signupForm.value)">
+        <div class="row col-md-4 col-10 p-0 m-0 m-auto px-3 py-5 auth-container">
+            <div class="row col-12 p-0 m-0">
+                <span class="heading">Signup</span>
+            </div>
+            <div class="row col-12 p-0 m-0 mt-3">
+                <span class="lbl-primary">Username</span>
+            </div>
+            <div class="row col-12 p-0 m-0 mt-3">
+                <input type="text" name="userName" formControlName='userName' class="input-control txt-primary">
+            </div>
+            <div class="row col-12 p-0 m-0 mt-3" *ngIf='userName?.errors?.required && userName?.touched && userName?.dirty'>
+                <label class="text-danger error p-0 m-0">Enter
+                    Username</label>
+            </div>
+            <div class="row col-12 p-0 m-0 mt-3" *ngIf='userName?.errors?.email && userName?.touched && userName?.dirty'>
+                <label class="text-danger error p-0 m-0">Enter valid email</label>
+            </div>
+            <div class="row col-12 p-0 m-0 mt-3">
+                <span class="lbl-primary">Password</span>
+            </div>
+            <div class="row col-12 p-0 m-0 mt-3">
+                <input type="password" name="password" formControlName='password' class="input-control txt-primary">
+            </div>
+            <div class="row col-12 p-0 m-0 mt-3" *ngIf='password?.errors?.required && password?.touched && password?.dirty'>
+                <span class="text-danger error p-0 m-0">Enter
+                    Password</span>
+            </div>
+            <div class="row col-12 p-0 m-0 mt-3" *ngIf='password?.errors?.pattern && password?.touched && password?.dirty'>
+                <span class="text-danger error p-0 m-0">Minimum 8 character, one upper, one lower, one number and one special characters</span>
+            </div>
+            <div class="row col-12 p-0 m-0 mt-3">
+                <span class="lbl-primary">Confirm Password</span>
+            </div>
+            <div class="row col-12 p-0 m-0 mt-3">
+                <input type="password" name="confirmPassword" required formControlName='confirmPassword' class="input-control txt-primary">
+            </div>
+            <div class="row col-12 p-0 m-0 mt-3" *ngIf='confirmPassword?.errors?.required && confirmPassword?.touched && confirmPassword?.dirty'>
+                <span class="text-danger error p-0 m-0">Enter Confirm
+                    Password</span>
+            </div>
+            <div class="row col-12 p-0 m-0 mt-3" *ngIf='confirmPassword?.errors?.match && confirmPassword?.touched && confirmPassword?.dirty'>
+                <span class="text-danger error p-0 m-0">Password must match</span>
+            </div>
+            <div class="row col-12 p-0 m-0 mt-3">
+                <div class='col-6 p-0 m-0 px-2 text-right'>
+                    <input type="submit" [disabled]='!signupForm.valid' class="btn btn-primary" value="Signup">
+                </div>
+                <div class='col-6 p-0 m-0 px-2 text-left'>
+                    <input type="button" class="btn btn-secondary" value="Cancel" (click)='resetForm(signupForm)'>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
